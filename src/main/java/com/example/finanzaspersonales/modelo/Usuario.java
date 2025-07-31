@@ -16,7 +16,6 @@ import java.util.HashSet;
 @EqualsAndHashCode(of = "id")
 @ToString(exclude = {"categorias", "roles"})
 @NoArgsConstructor // Genera un constructor sin argumentos
-@AllArgsConstructor // Genera un constructor con todos los argumentos
 @Entity
 @Table(name = "usuarios")
 public class Usuario {
@@ -42,6 +41,13 @@ public class Usuario {
         this.nombreUsuario = nombreUsuario;
         this.contrasena = contrasena;
         this.roles = new HashSet<>();
+    }
+
+    public Usuario(Long id, String nombreUsuario, String contrasena, Set<Rol> roles) {
+        this.id = id;
+        this.nombreUsuario = nombreUsuario;
+        this.contrasena = contrasena;
+        this.roles = roles;
     }
 
     public void addRol(Rol rol) {

@@ -91,7 +91,7 @@ public class JwtService {
      * @return Los claims del token.
      */
     private Claims extraerTodosLosClaims(String token) {
-        return Jwts.parserBuilder()
+        return Jwts.parser()
                 .setSigningKey(getSigningKey())
                 .build()
                 .parseClaimsJws(token)

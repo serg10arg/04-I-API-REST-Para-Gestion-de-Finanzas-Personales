@@ -28,4 +28,15 @@ public interface TransaccionRepository extends JpaRepository<Transaccion, Long> 
             @Param("fechaInicio") LocalDate fechaInicio,
             @Param("fechaFin") LocalDate fechaFin
     );
+
+    @Query("SELECT t FROM  Transaccion t WHERE t.categoria.usuario = :usuario")
+    List<Transaccion> findAByUsuario(@Param("usuario") Usuario usuario);
+
+    /**
+     * Encuentra todas las transacciones de un usuario navegando a través de la entidad Categoria.
+     * Spring Data JPA entiende que debe buscar transacciones donde transaccion.categoria.usuario coincida.
+     * @param usuario El usuario propietario de las transacciones.
+     * @return Una lista de transacciones.
+     */
+    List<Transaccion> findByCategoriaUsuario(Usuario usuario);
 }
