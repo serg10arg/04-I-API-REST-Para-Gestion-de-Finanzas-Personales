@@ -20,13 +20,13 @@ Los siguientes diagramas ilustran los dos flujos principales de la aplicación: 
 
 Este diagrama muestra cómo un usuario intercambia sus credenciales por un token JWT que le permitirá acceder a las partes seguras de la API.
 
-![diagrama-usuario](img/Flujo de Autenticación de Usuario.png)
+![diagrama-usuario](img/Screenshot_1.png)
 
 ### **Flujo de Creación de Transacción (Operación Protegida)**
 
 Una vez autenticado, el cliente utiliza el token JWT para realizar operaciones seguras. Este diagrama ilustra cómo se crea una nueva transacción, donde Spring Security valida el token antes de permitir que la petición llegue al controlador.
 
-![diagrama-transaccion](img/Flujo de Creacion de Transaccion.png)
+![diagrama-transaccion](img/Screenshot_2.png)
 
 ### **Flujo Completo de la aplicacion**
 
