@@ -20,7 +20,7 @@ Los siguientes diagramas ilustran los dos flujos principales de la aplicación: 
 
 Este diagrama muestra cómo un usuario intercambia sus credenciales por un token JWT que le permitirá acceder a las partes seguras de la API.
 
-![diagrama-autenticacion-de-usuario](img/flujo de Autenticación de Usuario.png)
+![diagrama-usuario](img/Flujo de Autenticación de Usuario.png)
 
 ### **Flujo de Creación de Transacción (Operación Protegida)**
 
